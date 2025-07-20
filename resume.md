@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Resume
+title: Saurabh Kaul
 permalink: /Resume/
 ---
 
-# Saurabh Kaul
 
 **Email:** saurabhkaul@icloud.com ❖ **Location:** New Delhi, India  
 **Links:** [GitHub](https://github.com/saurabhkaul) ❖ [LinkedIn](https://www.linkedin.com/in/saurabh-kaul-807a12125/) ❖ [Website](https://saurabhkaul.github.io)
