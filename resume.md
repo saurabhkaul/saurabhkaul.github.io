@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Saurabh Kaul
-permalink: /Resume/
+permalink: /resume/
 ---
 
 
