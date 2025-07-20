@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+
 
 ### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I'm a Software Engineer based in New Delhi, India. I'm a big Rust fanboy but I'm slowly back to learning new languages. Thinking of getting into Ocaml and Nix right now.
+Also, I'm looking for a new role so please get in touch with me if you're hiring.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[saurabhkaul@icloud.com](saurabhkaul@icloud.com)
