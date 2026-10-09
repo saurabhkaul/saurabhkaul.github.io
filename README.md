@@ -1,6 +1,6 @@
 # Saurabh Kaul's personal website
 
-A fresh start: one static HTML page, with no framework, build step, or external dependencies.
+A personal introduction with a restrained Y2K aesthetic: one static HTML page, with no framework, build step, or external dependencies.
 
 Site: https://saurabhkaul.github.io/
 
@@ -26,7 +26,7 @@ Open `index.html` directly in a browser. No installation is needed.
 
 ## Rebuild plan
 
-1. Deploy and verify this Hello World baseline at the existing URL.
+1. Deploy and verify the static baseline at the existing URL (completed).
 2. Decide the site's purpose, content, and navigation before choosing a framework.
 3. Build the design and content incrementally, starting with the homepage; check mobile layouts, accessibility, and links as pages are added.
 4. Keep using static hosting. If a build tool becomes necessary, add a Pages build workflow and publish generated artifacts instead of committing build output.
