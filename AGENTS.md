@@ -19,7 +19,7 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 
 ## Navigation and accessibility
 
-- Header links switch visibly between About, Current work, and Links. Preserve the selected-link indicator.
+- Header links switch visibly between About, Personal Projects, and Links. Preserve the selected-link indicator.
 - Keep `#about`, `#now`, and `#links` working as direct URLs, including on reload and browser Back/Forward.
 - Preserve native link behavior for modified clicks, keyboard activation, visible focus, and focus transfer to the selected section heading.
 - Without JavaScript, all sections remain readable and normal anchor navigation works.
@@ -29,7 +29,7 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 
 - Write short, direct, factual copy. Avoid sentimental language, welcome messages, and generic personal-brand slogans.
 - Preserve approved biography and project descriptions unless the task asks to change them. Ask the user when personal facts or employer links are uncertain.
-- Keep both explained, linked projects under one Current work heading. Gossip Glomers carries `(WIP)`.
+- Keep both explained, linked projects under one Personal Projects heading. Gossip Glomers carries `(WIP)`.
 - Employer links: ShowSeeker → https://www.showseeker.com/; Quantumlabs → https://quantumlabs.us/ (confirmed by the user); Paytm Insider → https://insider.in/.
 - Social links: GitHub → https://github.com/saurabhkaul; LinkedIn → https://www.linkedin.com/in/saurabh-kaul-807a12125/; Twitter → https://x.com/saurabhkaul5.
 - The footer contains View source; do not reintroduce the removed “Personal website” label.
