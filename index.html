@@ -3,218 +3,179 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#008080">
-    <meta name="description" content="Saurabh Kaul is a software engineer in New Delhi, focused on Rust, backend engineering, and distributed systems.">
+    <meta name="theme-color" content="#d7dadc">
+    <meta name="description" content="Saurabh Kaul. Software engineer in New Delhi working with Rust, backend services, and distributed systems.">
     <title>Saurabh Kaul — Software Engineer</title>
     <style>
-      :root { --silver: #c0c0c0; --navy: #000080; --desktop: #008080; }
       * { box-sizing: border-box; }
       [hidden] { display: none !important; }
-      html { scroll-padding-bottom: 64px; }
-      body {
-        margin: 0; min-height: 100vh; padding: 42px 28px 90px;
-        color: #111; font: 14px/1.65 Tahoma, Verdana, sans-serif;
-        background-color: var(--desktop);
-        background-image: radial-gradient(#ffffff16 1px, transparent 1px);
-        background-size: 4px 4px;
-      }
-      body.midnight { --desktop: #29205b; }
-      a { color: #0000bb; text-underline-offset: 3px; }
-      a:visited { color: #551a8b; }
-      a:hover { color: #b00060; }
-      button { font: inherit; color: inherit; cursor: pointer; border-radius: 0; }
-      a:focus-visible, button:focus-visible { outline: 2px dotted #111; outline-offset: 3px; }
-      .raised { background: var(--silver); border: 2px solid; border-color: #fff #333 #333 #fff; box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf; }
-      .inset { border: 2px solid; border-color: #808080 #fff #fff #808080; }
-      .desktop { display: grid; grid-template-columns: 90px minmax(0, 690px) 240px; gap: 24px; max-width: 1090px; margin: auto; align-items: start; }
-      .shortcuts { display: grid; gap: 25px; padding-top: 8px; }
-      .shortcut { display: grid; justify-items: center; gap: 6px; color: #fff !important; text-decoration: none; text-align: center; font-size: 12px; line-height: 1.4; text-shadow: 1px 1px #003d3d; }
-      .shortcut span { padding: 1px 4px; }
-      .shortcut:hover span, .shortcut:focus-visible span { background: var(--navy); outline: 1px dotted #fff; }
-      .pixel { width: 36px; height: 36px; image-rendering: pixelated; shape-rendering: crispEdges; }
-      .window { padding: 3px; box-shadow: 3px 3px #0005; min-width: 0; }
-      .titlebar { display: flex; align-items: center; gap: 7px; padding: 3px 5px; background: linear-gradient(90deg, var(--navy), #1084d0); color: #fff; font-weight: bold; font-size: 12px; line-height: 1.6; }
-      .titlebar .pixel { width: 18px; height: 18px; }
-      .titlebar .name { flex: 1; }
-      .window-control { width: 23px; height: 21px; padding: 0; line-height: 14px; font-size: 16px; }
-      .window-control:active, .retro-button:active { border-color: #333 #fff #fff #333; box-shadow: none; }
-      .menu-strip { display: flex; gap: 20px; padding: 5px 9px; font-size: 12px; border-bottom: 1px solid #888; }
-      .menu-strip a { color: #111; text-decoration: none; }
-      .menu-strip a:hover { text-decoration: underline; }
-      .address { display: flex; align-items: center; gap: 8px; padding: 7px; font-size: 12px; }
-      .address span { flex: 1; min-width: 0; padding: 2px 6px; background: #fff; font-family: "Courier New", monospace; overflow-wrap: anywhere; }
-      main { background: #fff; padding: clamp(22px, 4vw, 38px); }
-      .eyebrow { margin: 0 0 16px; color: #555; font: 11px/1.6 "Courier New", monospace; text-transform: uppercase; letter-spacing: .07em; }
-      .eyebrow::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px; background: #008080; }
-      h1 { font: bold clamp(30px, 4vw, 42px)/1.15 Georgia, "Times New Roman", serif; letter-spacing: -.04em; margin: 0 0 20px; }
-      p { margin: 0 0 17px; }
-      .intro { font-size: 15px; }
-      .rule { height: 4px; margin: 26px 0; background: repeating-linear-gradient(90deg, #000080 0 8px, #008080 8px 16px, #c0c0c0 16px 24px); }
-      h2 { margin: 0 0 10px; font: bold 12px/1.5 "Courier New", monospace; text-transform: uppercase; letter-spacing: .06em; }
-      .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
-      .retro-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 4px 13px; font-size: 12px; text-decoration: none; color: #111 !important; min-height: 32px; }
-      .retro-button .pixel { width: 18px; height: 18px; }
-      .statusbar { display: flex; gap: 4px; padding-top: 4px; font-size: 11px; }
-      .statusbar span { padding: 1px 6px; }
-      .statusbar span:first-child { flex: 1; }
-      .sidebar { display: grid; gap: 22px; padding-top: 65px; }
-      .sidebar .titlebar { background: linear-gradient(90deg, #555, #999); }
-      .terminal { padding: 18px 14px; background: #111b1b; color: #c4e7d5; font: 12px/1.8 "Courier New", monospace; }
-      .terminal p:last-child { margin-bottom: 0; }
-      .terminal .prompt { color: #78f3aa; }
-      .terminal .label { color: #8ca6a6; }
-      .notepad { padding: 17px; background: #ffffdf; font: 13px/1.7 "Courier New", monospace; }
-      .notepad p { margin: 0; }
-      .stamps { display: flex; justify-content: center; gap: 8px; }
-      .stamp { width: 94px; padding: 4px 3px; border: 2px outset #fff; background: #000080; color: #fff; text-align: center; font: bold 10px/1.25 "Courier New", monospace; }
-      .stamp.alt { background: #ffffb5; color: #111; }
-      .desktop-caption { grid-column: 2 / -1; color: #e0ffff; font: 11px "Courier New", monospace; text-align: center; text-shadow: 1px 1px #003d3d; }
-      .taskbar { position: fixed; bottom: 0; left: 0; right: 0; display: flex; align-items: center; gap: 8px; padding: 5px 6px; padding-bottom: max(5px, env(safe-area-inset-bottom)); border-top: 2px solid #fff; background: var(--silver); z-index: 10; }
-      .start { font-weight: bold; font-size: 14px; }
-      .start-mark { display: grid; grid-template-columns: repeat(2, 7px); gap: 2px; transform: skewY(-8deg); }
-      .start-mark i { height: 7px; background: #f24a30; }
-      .start-mark i:nth-child(2) { background: #6abb37; }
-      .start-mark i:nth-child(3) { background: #347bdd; }
-      .start-mark i:nth-child(4) { background: #ffd33a; }
-      .task { width: min(230px, 45vw); justify-content: start; font-weight: bold; background: #dfdfdf; }
-      .clock { margin-left: auto; padding: 4px 12px; font-size: 12px; white-space: nowrap; }
-      .start-menu { position: fixed; bottom: 47px; left: 5px; width: 240px; padding: 5px; z-index: 11; }
-      .start-menu header { padding: 8px 10px; background: var(--navy); color: #fff; font-weight: bold; }
-      .start-menu a, .start-menu button { display: block; padding: 10px 12px; width: 100%; background: none; border: 0; color: #111; text-align: left; text-decoration: none; }
-      .start-menu a:hover, .start-menu button:hover { background: var(--navy); color: #fff; }
-      .desktop.expanded { grid-template-columns: 90px minmax(0, 1fr); }
-      .desktop.expanded .sidebar { grid-column: 2; grid-template-columns: 1fr 1fr; padding-top: 0; }
-      .desktop.expanded .stamps { grid-column: 1 / -1; }
-      @media (min-width: 1500px) { body { padding-top: 75px; } }
-      @media (max-width: 1020px) {
-        .desktop { grid-template-columns: 70px minmax(0, 690px); justify-content: center; gap: 18px; }
-        .sidebar { grid-column: 2; grid-template-columns: 1fr 1fr; padding-top: 0; }
-        .stamps { grid-column: 1 / -1; }
-      }
-      @media (max-width: 600px) {
-        body { padding: 20px 12px 85px; }
-        .desktop, .desktop.expanded { display: flex; flex-direction: column; gap: 20px; }
-        .shortcuts { display: flex; gap: 26px; padding: 0 8px; }
-        .shortcut { font-size: 11px; }
-        .shortcut .pixel { width: 30px; height: 30px; }
-        .window, .sidebar { width: 100%; }
-        .sidebar, .desktop.expanded .sidebar { grid-template-columns: 1fr; }
-        .menu-strip { gap: 22px; }
-        .address { font-size: 10px; }
-        .statusbar { font-size: 10px; }
-        .desktop-caption { align-self: center; }
-        .window-control { display: none; }
-        .clock { padding: 4px 7px; font-size: 11px; }
-        .task { padding: 4px 8px; }
+      :root { --blue: #366e94; --line: #a8b4bd; --ink: #2c3439; }
+      body { margin: 0; padding: 35px 14px; min-height: 100vh; background: #e8ebed; color: var(--ink); font: 14px/1.6 Tahoma, Verdana, sans-serif; }
+      button, a { -webkit-tap-highlight-color: transparent; }
+      button { font: inherit; color: inherit; cursor: pointer; }
+      a { color: var(--blue); }
+      button:focus-visible, a:focus-visible { outline: 3px solid #326f9c; outline-offset: 3px; }
+      .console { width: min(760px, 100%); margin: auto; border: 1px solid #b9bfc4; border-radius: 26px; background: #d7dadc; box-shadow: 0 2px 0 #fff inset, 0 -3px 0 #b5bbc0 inset, 0 20px 45px #293d4c1c; overflow: hidden; }
+      .lid, .base { position: relative; padding: 25px 105px 27px; }
+      .lid { border-radius: 26px 26px 10px 10px; background: linear-gradient(#edf0f1, #d0d4d7); }
+      .speaker { position: absolute; top: 145px; display: grid; grid-template-columns: repeat(3, 4px); gap: 7px; }
+      .speaker.left { left: 44px; } .speaker.right { right: 44px; }
+      .speaker i { width: 4px; height: 4px; border-radius: 50%; background: #8e959a; box-shadow: 0 1px #fff; }
+      .screen-bezel { padding: 9px; background: #525b62; border: 1px solid #303b44; border-radius: 7px; box-shadow: 0 1px #fff, inset 0 2px 3px #0004; }
+      .screen { position: relative; border: 1px solid #56616b; background-color: #f7f8f8; background-image: linear-gradient(#6c889710 1px, transparent 1px), linear-gradient(90deg, #6c889710 1px, transparent 1px); background-size: 6px 6px; }
+      .top-screen { min-height: 300px; display: flex; flex-direction: column; }
+      .system-bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 6px 12px; border-bottom: 1px solid var(--line); background: #e5e9ed; font: 11px/1.5 "Courier New", monospace; }
+      .system-bar time { white-space: nowrap; }
+      .profile { padding: 22px 24px 18px; flex: 1; }
+      .profile-label { display: flex; align-items: center; gap: 7px; margin: 0 0 9px; color: #536b7b; font: bold 10px/1.5 "Courier New", monospace; letter-spacing: .08em; text-transform: uppercase; }
+      .profile-label::before { content: ""; width: 6px; height: 6px; background: #5d92b5; }
+      h1 { margin: 0 0 3px; font-size: 27px; line-height: 1.25; letter-spacing: -.04em; }
+      .role { color: #61717d; margin: 0 0 16px; font-size: 12px; }
+      p { margin: 0 0 12px; }
+      .profile p:last-child { margin-bottom: 0; }
+      .bio { font-size: 13px; line-height: 1.7; }
+      .screen-status { margin-top: auto; border-top: 1px solid var(--line); padding: 4px 12px; font: 10px/1.5 "Courier New", monospace; background: #e5e9ed; color: #536370; }
+      .hinge { height: 24px; margin: 0 18px; border: 1px solid #aab1b7; border-radius: 9px; background: linear-gradient(#c6ccd0, #eef0f1 45%, #b9c0c6); box-shadow: 0 2px 3px #0002; position: relative; }
+      .hinge::before, .hinge::after { content: ""; position: absolute; top: -1px; bottom: -1px; width: 30px; border-inline: 1px solid #aab1b7; }
+      .hinge::before { left: 40px; } .hinge::after { right: 40px; }
+      .base { padding-top: 24px; padding-bottom: 34px; background: linear-gradient(115deg, #e0e3e5, #d1d6d9); }
+      .touch-screen { padding: 12px; min-height: 276px; }
+      .menu-header { display: flex; justify-content: space-between; margin: 0 2px 9px; font: 10px/1.5 "Courier New", monospace; text-transform: uppercase; color: #5d6b76; }
+      .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .tile { position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; min-width: 0; min-height: 73px; padding: 12px 15px; text-decoration: none; color: var(--ink); text-align: left; border: 1px solid #8fa5b5; border-radius: 2px; background: linear-gradient(#fff, #e9edf0); box-shadow: inset 0 0 0 2px #fff, 0 2px 0 #c0cbd2; }
+      .tile.wide { grid-column: 1 / -1; }
+      .tile:hover { background: #edf6fb; border-color: var(--blue); }
+      .tile[aria-pressed="true"] { background: linear-gradient(#f3faff, #d9e9f3); border-color: #41799e; box-shadow: inset 0 0 0 2px #fff, 0 0 0 1px #41799e; }
+      .tile[aria-pressed="true"]::after { content: ""; position: absolute; left: 4px; top: 4px; width: 5px; height: 5px; border-left: 2px solid #d05247; border-top: 2px solid #d05247; }
+      .tile strong { display: block; font-size: 13px; font-weight: bold; line-height: 1.4; }
+      .tile small { display: block; margin-top: 2px; color: #657581; font-size: 10px; line-height: 1.5; }
+      .pixel { width: 30px; height: 30px; flex-shrink: 0; shape-rendering: crispEdges; }
+      .tile:not(.wide) { flex-direction: column; justify-content: center; gap: 5px; text-align: center; padding: 10px 6px; }
+      .tile:not(.wide) .pixel { width: 26px; height: 26px; }
+      .touch-footer { margin: 12px 0 0; text-align: center; font: 10px/1.5 "Courier New", monospace; color: #61717d; }
+      .dpad { position: absolute; left: 25px; top: 111px; width: 58px; height: 58px; }
+      .dpad::before { content: ""; position: absolute; inset: 0; background: #b4bcc2; clip-path: polygon(33% 0, 67% 0, 67% 33%, 100% 33%, 100% 67%, 67% 67%, 67% 100%, 33% 100%, 33% 67%, 0 67%, 0 33%, 33% 33%); }
+      .dpad button { position: absolute; width: 20px; height: 20px; border: 0; padding: 0; background: #cbd1d5; font-size: 10px; box-shadow: inset 0 1px #f0f2f3; }
+      .dpad button:hover { background: #e5e9ec; }
+      .up { top: 0; left: 19px; } .down { bottom: 0; left: 19px; } .left-key { left: 0; top: 19px; } .right-key { right: 0; top: 19px; }
+      .action-buttons { position: absolute; right: 25px; top: 102px; width: 58px; height: 70px; }
+      .action-buttons button { position: absolute; width: 25px; height: 25px; border: 1px solid #aab3ba; border-radius: 50%; background: linear-gradient(#e1e6e9, #bbc3c9); box-shadow: 0 2px 1px #9ca6ad; font: bold 10px Tahoma, sans-serif; color: #616e77; }
+      .action-buttons button:hover { background: #f3f6f8; }
+      .key-x { left: 16px; top: 0; } .key-y { left: 0; top: 23px; } .key-a { right: 0; top: 23px; } .key-b { left: 16px; bottom: 0; }
+      .hardware-label { position: absolute; bottom: 12px; left: 0; right: 0; text-align: center; font: 9px "Courier New", monospace; color: #77838c; letter-spacing: .18em; }
+      .led { position: absolute; right: 34px; top: 12px; width: 9px; height: 3px; background: #75a475; box-shadow: 0 0 2px #83b283; }
+      .page-footer { display: flex; justify-content: space-between; gap: 10px; max-width: 690px; margin: 18px auto 0; color: #6a7882; font: 10px/1.5 "Courier New", monospace; }
+      .page-footer a { color: inherit; }
+      #now-panel ul { padding-left: 18px; margin: 14px 0 0; font-size: 13px; }
+      #now-panel li { margin: 7px 0; }
+      @media (max-width: 640px) {
+        body { padding: 18px 10px; }
+        .console { max-width: 460px; border-radius: 17px; }
+        .lid, .base { padding: 17px 16px 20px; }
+        .base { padding-bottom: 28px; }
+        .speaker, .dpad, .action-buttons { display: none; }
+        .screen-bezel { padding: 6px; }
+        .profile { padding: 20px 17px; }
+        .top-screen { min-height: 322px; }
+        .system-bar { padding: 6px 8px; font-size: 10px; }
+        .hinge { margin: 0 12px; height: 18px; }
+        h1 { font-size: 25px; }
+        .tile { padding: 10px 12px; }
+        .page-footer { max-width: 430px; padding: 0 5px; font-size: 9px; }
       }
     </style>
   </head>
   <body>
     <svg width="0" height="0" aria-hidden="true" style="position:absolute">
       <defs>
-        <symbol id="computer" viewBox="0 0 32 32">
-          <path fill="#111" d="M3 2h25v21H3zM12 23h8v4h7v3H5v-3h7z"/>
-          <path fill="#c0c0c0" d="M4 3h23v19H4zM13 23h6v5h7v1H6v-1h7z"/>
-          <path fill="#fff" d="M5 4h21v1H5zM5 4h1v16H5z"/>
-          <path fill="#000080" d="M7 6h17v13H7z"/>
-          <path fill="#00baba" d="M8 7h15v10H8z"/><path fill="#fff" d="M10 9h6v1h-6zM10 11h10v1H10z"/>
-        </symbol>
-        <symbol id="folder" viewBox="0 0 32 32">
-          <path fill="#111" d="M2 7h12l3 3h13v17H2z"/><path fill="#d7a800" d="M3 8h10l3 3h13v15H3z"/>
-          <path fill="#fff4a0" d="M3 12h26v2H3z"/><path fill="#ffe46b" d="M4 14h24v11H4z"/>
-        </symbol>
-        <symbol id="globe" viewBox="0 0 32 32">
-          <path fill="#111" d="M10 2h12v2h4v4h3v16h-3v4h-4v2H10v-2H6v-4H3V8h3V4h4z"/>
-          <path fill="#1684d0" d="M10 3h12v2h3v4h3v14h-3v4h-3v2H10v-2H7v-4H4V9h3V5h3z"/>
-          <path fill="#6bcf72" d="M10 5h8v3h-4v4H8V9H6V7h4zM17 13h7v4h3v5h-4v4h-4v-6h-3v-4h1zM7 18h5v4H9v3H7z"/>
-          <path fill="#fff" d="M10 4h5v2h-5zM7 6h3v2H7z"/>
-        </symbol>
+        <symbol id="card" viewBox="0 0 32 32"><path fill="#657b8c" d="M6 2h17l4 4v24H6z"/><path fill="#eef3f6" d="M8 4h13v4h4v20H8z"/><path fill="#91b5ce" d="M11 8h9v8h-9z"/><path fill="#536f83" d="M11 19h11v2H11zM11 23h8v2h-8z"/><path fill="#d4b97c" d="M9 28h3v2H9zM14 28h3v2h-3zM19 28h3v2h-3z"/></symbol>
+        <symbol id="code" viewBox="0 0 32 32"><path fill="#738c9e" d="M2 4h28v23H2zM10 28h12v2H10z"/><path fill="#edf4f8" d="M4 6h24v19H4z"/><path fill="#507b9b" d="M10 10h3v2h-3v2H8v3h2v2h3v2h-3v-2H7v-2H5v-3h2v-2h3zM19 10h3v2h3v2h2v3h-2v2h-3v2h-3v-2h3v-2h2v-3h-2v-2h-3z"/></symbol>
+        <symbol id="chat" viewBox="0 0 32 32"><path fill="#6c8394" d="M2 4h27v19H13l-7 6v-6H2z"/><path fill="#f4f7fa" d="M4 6h23v15H11l-3 3v-3H4z"/><path fill="#86a9c1" d="M7 10h16v2H7zM7 15h11v2H7z"/></symbol>
+        <symbol id="tools" viewBox="0 0 32 32"><path fill="#6f899c" d="M4 3h7v3H8v6h7V9h3v7l-5 4-7 10H2v-4l9-10-7-4z"/><path fill="#9db7c9" d="M23 2h4v13h-2v11h-3V15h-2V2z"/></symbol>
       </defs>
     </svg>
-    <div class="desktop" id="desktop">
-      <nav class="shortcuts" aria-label="Desktop shortcuts">
-        <a class="shortcut" href="#home"><svg class="pixel" aria-hidden="true"><use href="#computer"/></svg><span>My homepage</span></a>
-        <a class="shortcut" href="https://github.com/saurabhkaul"><svg class="pixel" aria-hidden="true"><use href="#folder"/></svg><span>My GitHub</span></a>
-        <a class="shortcut" href="https://www.linkedin.com/in/saurabh-kaul-807a12125/"><svg class="pixel" aria-hidden="true"><use href="#globe"/></svg><span>LinkedIn</span></a>
-      </nav>
-      <section class="window raised" aria-label="Personal homepage">
-        <header class="titlebar"><svg class="pixel" aria-hidden="true"><use href="#globe"/></svg><span class="name">Saurabh's homepage — Internet Explorer</span><button class="window-control raised" id="expand" aria-label="Expand window" aria-pressed="false">□</button></header>
-        <nav class="menu-strip" aria-label="Page sections"><a href="#home"><u>H</u>ome</a><a href="#now"><u>N</u>ow</a><a href="#links"><u>L</u>inks</a></nav>
-        <div class="address">Address <span class="inset">https://saurabhkaul.github.io/</span></div>
-        <main class="inset" id="home">
-          <p class="eyebrow">Software engineer / New Delhi, India</p>
-          <h1>Hey, I'm Saurabh.</h1>
-          <p class="intro">I build software, with a focus on <strong>Rust, backend engineering,</strong> and systems that stay fast and reliable as they grow. My work has taken me from ticketing and checkout flows at Paytm Insider to trading infrastructure at Quantumlabs and Rust backend services at ShowSeeker.</p>
-          <p>I enjoy getting into the details: making searches faster, working through messy data, and figuring out how services fit together. I've worked across the stack, but the backend is where I feel most at home.</p>
-          <div class="rule" aria-hidden="true"></div>
-          <h2 id="now">// These days</h2>
-          <p>I'm digging deeper into systems programming and distributed systems, building a market-data parser in Rust and working through Fly.io's distributed systems challenges.</p>
-          <nav class="links" id="links" aria-label="Find me online">
-            <a class="retro-button raised" href="https://github.com/saurabhkaul"><svg class="pixel" aria-hidden="true"><use href="#folder"/></svg>GitHub ↗</a>
-            <a class="retro-button raised" href="https://www.linkedin.com/in/saurabh-kaul-807a12125/"><svg class="pixel" aria-hidden="true"><use href="#globe"/></svg>LinkedIn ↗</a>
-          </nav>
-        </main>
-        <footer class="statusbar"><span class="inset">Done. Welcome to my corner of the web.</span><span class="inset">Internet</span></footer>
-      </section>
-      <aside class="sidebar" aria-label="Desktop notes">
-        <section class="window raised">
-          <header class="titlebar">interests.txt</header>
-          <div class="terminal inset"><p><span class="prompt">C:\SAURABH&gt;</span> interests</p><p><span class="label">language</span><br>Rust<br><span class="label">focus</span><br>Backend engineering<br>Distributed systems<br><span class="label">location</span><br>New Delhi, India</p></div>
-        </section>
-        <section class="window raised">
-          <header class="titlebar">a little note — Notepad</header>
-          <div class="notepad inset"><p>The web is better with personal websites.<br><br>Thanks for stopping by. :)</p></div>
-        </section>
-        <div class="stamps" aria-label="Made with HTML on Earth"><span class="stamp">HAND-CODED<br>HTML INSIDE</span><span class="stamp alt">MADE ON<br>PLANET EARTH</span></div>
-      </aside>
-      <div class="desktop-caption">a small corner of a very big internet</div>
-    </div>
-    <nav class="start-menu raised" id="start-menu" aria-label="Start menu" hidden>
-      <header>Saurabh's desktop</header>
-      <a href="#home">My homepage</a>
-      <a href="https://github.com/saurabhkaul">My GitHub</a>
-      <a href="https://www.linkedin.com/in/saurabh-kaul-807a12125/">LinkedIn</a>
-      <button id="wallpaper" type="button">Change wallpaper</button>
-    </nav>
-    <footer class="taskbar">
-      <button class="retro-button raised start" id="start" aria-expanded="false" aria-controls="start-menu"><span class="start-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Start</button>
-      <a class="retro-button inset task" href="#home"><svg class="pixel" aria-hidden="true"><use href="#globe"/></svg>Saurabh's homepage</a>
-      <time class="clock inset" id="clock" aria-label="Your local time">Local time</time>
-    </footer>
+    <main class="console" aria-label="Dual-screen personal website">
+      <div class="lid">
+        <div class="speaker left" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="screen-bezel">
+          <section class="screen top-screen" aria-label="Profile display">
+            <header class="system-bar"><span>SAURABH</span><time id="datetime" aria-label="Your local date and time">Local time</time></header>
+            <div class="profile" id="about-panel">
+              <p class="profile-label">Profile</p>
+              <h1>Saurabh Kaul</h1>
+              <p class="role">Software engineer · New Delhi</p>
+              <p class="bio">I work mainly with Rust, building backend services and working on performance, data processing, and distributed systems.</p>
+              <p class="bio">Previously: Rust backend services at ShowSeeker, trading infrastructure at Quantumlabs, and full-stack work at Paytm Insider.</p>
+            </div>
+            <div class="profile" id="now-panel" hidden>
+              <p class="profile-label">Current work</p>
+              <h1>Systems &amp; Rust</h1>
+              <p class="role">Personal projects</p>
+              <p class="bio">Working on systems programming and distributed systems.</p>
+              <ul><li>A market-data parser in Rust.</li><li>Fly.io's distributed systems challenges.</li></ul>
+            </div>
+            <footer class="screen-status" id="screen-status" aria-live="polite">01 / Profile</footer>
+          </section>
+        </div>
+        <div class="speaker right" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="hinge" aria-hidden="true"></div>
+      <div class="base">
+        <div class="led" aria-hidden="true"></div>
+        <div class="dpad" role="group" aria-label="Move between menu items">
+          <button class="up" data-move="-1" aria-label="Previous menu item">▲</button><button class="left-key" data-move="-1" aria-label="Previous menu item">◀</button><button class="right-key" data-move="1" aria-label="Next menu item">▶</button><button class="down" data-move="1" aria-label="Next menu item">▼</button>
+        </div>
+        <div class="screen-bezel">
+          <section class="screen touch-screen" aria-label="Home menu">
+            <header class="menu-header"><span>Home menu</span><span>Touch to select</span></header>
+            <nav class="menu" aria-label="Website menu">
+              <button class="tile wide" data-panel="about" aria-pressed="true" aria-controls="about-panel"><svg class="pixel" aria-hidden="true"><use href="#card"/></svg><span><strong>Saurabh Kaul</strong><small>Profile / Software engineer</small></span></button>
+              <a class="tile" href="https://github.com/saurabhkaul"><svg class="pixel" aria-hidden="true"><use href="#code"/></svg><span><strong>GitHub</strong><small>Code &amp; projects ↗</small></span></a>
+              <a class="tile" href="https://www.linkedin.com/in/saurabh-kaul-807a12125/"><svg class="pixel" aria-hidden="true"><use href="#chat"/></svg><span><strong>LinkedIn</strong><small>Work history ↗</small></span></a>
+              <button class="tile wide" data-panel="now" aria-pressed="false" aria-controls="now-panel"><svg class="pixel" aria-hidden="true"><use href="#tools"/></svg><span><strong>Current work</strong><small>Systems programming / Rust</small></span></button>
+            </nav>
+            <p class="touch-footer">Select a panel to view it on the upper screen.</p>
+          </section>
+        </div>
+        <div class="action-buttons" role="group" aria-label="Screen controls"><button class="key-x" data-show="now" aria-label="Show current work">X</button><button class="key-y" data-show="about" aria-label="Show profile">Y</button><button class="key-a" id="activate" aria-label="Open selected menu item">A</button><button class="key-b" data-show="about" aria-label="Back to profile">B</button></div>
+        <div class="hardware-label" aria-hidden="true">DUAL SCREEN</div>
+      </div>
+    </main>
+    <footer class="page-footer"><span>New Delhi, India</span><a href="https://github.com/saurabhkaul/saurabhkaul.github.io">Website source ↗</a></footer>
     <script>
-      const start = document.getElementById('start');
-      const menu = document.getElementById('start-menu');
-      function closeMenu() { menu.hidden = true; start.setAttribute('aria-expanded', 'false'); }
-      start.addEventListener('click', () => {
-        menu.hidden = !menu.hidden;
-        start.setAttribute('aria-expanded', String(!menu.hidden));
-      });
-      document.addEventListener('click', (event) => {
-        if (!menu.contains(event.target) && !start.contains(event.target)) closeMenu();
-      });
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && !menu.hidden) { closeMenu(); start.focus(); }
-      });
-      menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-      document.getElementById('wallpaper').addEventListener('click', () => {
-        document.body.classList.toggle('midnight');
-        closeMenu();
-        start.focus();
-      });
-      const expand = document.getElementById('expand');
-      expand.addEventListener('click', () => {
-        const expanded = document.getElementById('desktop').classList.toggle('expanded');
-        expand.setAttribute('aria-pressed', String(expanded));
-        expand.setAttribute('aria-label', expanded ? 'Restore window size' : 'Expand window');
-      });
-      function updateClock() {
-        const now = new Date();
-        const clock = document.getElementById('clock');
-        clock.dateTime = now.toISOString();
-        clock.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const tiles = [...document.querySelectorAll('.tile')];
+      let selected = 0;
+      function showPanel(name) {
+        document.getElementById('about-panel').hidden = name !== 'about';
+        document.getElementById('now-panel').hidden = name !== 'now';
+        document.querySelectorAll('[data-panel]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.panel === name)));
+        document.getElementById('screen-status').textContent = name === 'about' ? '01 / Profile' : '02 / Current work';
       }
-      updateClock();
-      setInterval(updateClock, 30000);
+      tiles.forEach((tile, index) => {
+        tile.addEventListener('focus', () => { selected = index; });
+        if (tile.dataset.panel) tile.addEventListener('click', () => showPanel(tile.dataset.panel));
+        tile.addEventListener('keydown', event => {
+          if (['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft'].includes(event.key)) {
+            event.preventDefault();
+            moveSelection(['ArrowDown', 'ArrowRight'].includes(event.key) ? 1 : -1);
+          }
+        });
+      });
+      function moveSelection(direction) { selected = (selected + direction + tiles.length) % tiles.length; tiles[selected].focus(); }
+      document.querySelectorAll('[data-move]').forEach(button => button.addEventListener('click', () => moveSelection(Number(button.dataset.move))));
+      document.querySelectorAll('[data-show]').forEach(button => button.addEventListener('click', () => {
+        showPanel(button.dataset.show);
+        selected = button.dataset.show === 'about' ? 0 : 3;
+      }));
+      document.getElementById('activate').addEventListener('click', () => tiles[selected].click());
+      function updateTime() {
+        const now = new Date();
+        const time = document.getElementById('datetime');
+        time.dateTime = now.toISOString();
+        time.textContent = now.toLocaleDateString([], { month: '2-digit', day: '2-digit' }) + '  ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+      }
+      updateTime();
+      setInterval(updateTime, 30000);
     </script>
   </body>
 </html>
