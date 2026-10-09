@@ -1,8 +1,1 @@
-*.gem
-.bundle
-.jekyll-cache
-.sass-cache
-_site
-Gemfile.lock
-_posts/2021-07-13-Hello-World.md
-_posts/2021-07-16-this-post-demonstrates-post-content-styles.md
+.DS_Store
