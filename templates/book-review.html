@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e3e6eb">
+    <meta name="description" content="Saurabh Kaul's review of {{BOOK_TITLE}} by {{BOOK_AUTHOR}}.">
+    <title>{{BOOK_TITLE}} — Saurabh Kaul</title>
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <div class="window">
+      <header class="titlebar"><span class="page-icon" aria-hidden="true"></span>{{BOOK_SLUG}}.html</header>
+      <nav class="toolbar" aria-label="Page navigation"><a href="../#about">About</a><a href="../#now">Personal Projects</a><a href="../#reading" aria-current="location">Currently reading</a><a href="../#links">Links</a></nav>
+      <div class="address">https://saurabhkaul.github.io/reading/{{BOOK_SLUG}}.html</div>
+      <main>
+        <article aria-labelledby="book-heading">
+          <p class="eyebrow">Book review / Saurabh Kaul</p>
+          <h1 id="book-heading">{{BOOK_TITLE}}</h1>
+          <p class="review-meta">{{BOOK_AUTHOR}} / {{REVIEW_WORD_COUNT}} words</p>
+          <div class="review-body">
+            {{REVIEW_PARAGRAPHS}}
+          </div>
+          <nav class="review-back" aria-label="Back to book list"><a href="../#reading">← Currently reading</a></nav>
+        </article>
+      </main>
+      <footer class="statusbar"><a href="https://github.com/saurabhkaul/saurabhkaul.github.io">View source</a></footer>
+    </div>
+  </body>
+</html>
