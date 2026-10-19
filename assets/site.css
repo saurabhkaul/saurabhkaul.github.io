@@ -72,3 +72,11 @@ h2 { margin: 0 0 9px; font: bold 12px/1.5 "Courier New", monospace; text-transfo
 .book-cover figcaption { margin-top: 8px; font: 10px/1.7 "Courier New", monospace; }
 .review-pending { color: #666; font: 12px/1.7 "Courier New", monospace; }
 @media (max-width: 420px) { .book-overview { grid-template-columns: 1fr; gap: 20px; } }
+
+.reading-progress { max-width: 260px; margin: 10px 0 4px; }
+.progress-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3px 12px; margin-bottom: 4px; font: 10px/1.6 "Courier New", monospace; }
+.progress-kind { color: #666; }
+.progress-track { display: flex; gap: 3px; height: 17px; padding: 2px; background: #dfdfdf; border: 2px solid; border-color: #808080 #fff #fff #808080; }
+.progress-track > span { flex: 1; min-width: 0; }
+.progress-track > .is-filled { background: repeating-linear-gradient(90deg, #000080 0 7px, transparent 7px 9px); }
+.review-body .reading-progress { margin-top: 0; margin-bottom: 24px; }
