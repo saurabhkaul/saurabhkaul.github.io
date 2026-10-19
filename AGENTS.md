@@ -70,3 +70,5 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 - Experimental Explorer-style layout rules live only in `assets/reading-2.css` and are scoped to `.reading-test`. The experiment may extend the aesthetic with a folder sidebar, small cover thumbnails, and a details list; it does not change the main design checkpoint.
 - Keep book order, authors, review links, and progress statuses consistent between the two lists. There are no exact chapter counts yet.
 - Homepage section-navigation JavaScript handles only fragment links. Links to the standalone test page must use normal browser navigation.
+
+- Reading 2 specifically targets Windows 95–97: teal desktop, solid navy title bar, flat silver controls, a white inset folder tree, compact file rows, small thumbnails, and MS Sans Serif/Tahoma text. Its subtitle is `My current reading list`. Avoid pastel sidebar gradients, alternating row colors, and large editorial headings in this experiment.
