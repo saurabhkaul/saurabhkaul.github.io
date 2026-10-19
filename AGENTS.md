@@ -15,7 +15,7 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 - Tahoma/Verdana body text, a Georgia name heading, and small Courier New labels.
 - Plain blue underlined links, restrained spacing, and simple browser chrome.
 - Keep the design minimal. Avoid glossy title bars, rounded metallic frames, heavy gradients, dashboard cards, decorative slogans, badges, or extra desktop windows.
-- The Nintendo DS console layout and the elaborate desktop/taskbar layout were superseded. Do not restore them unless requested.
+- The Nintendo DS console layout, elaborate desktop/taskbar layout, and Currently Reading 2 experiment were retired. Do not restore them unless requested.
 
 ## Navigation and accessibility
 
@@ -32,7 +32,7 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 - Keep both explained, linked projects under one Personal Projects heading. Gossip Glomers carries `(WIP)`.
 - The reading section is titled `Currently Reading` and lists books the user is reading or has finished. Each book links to its own static review page, with a review of 200 words or fewer.
 - Sort the reading list from started to finished: DDIA, Rust Atomics and Locks, then Rust for Rustaceans. Their confirmed statuses are Started, Mostly finished, and Finished respectively.
-- Use small classic Windows 95/98 progress bars: a square, two-pixel sunken frame, silver-grey track, and consistently spaced navy blocks. Show only the bars, without visible status labels, percentages, or “Reading stage” text; retain qualitative reading statuses as accessible labels. Until chapter counts are supplied, fill levels represent stages, not exact completion percentages. Keep statuses consistent on the list and each review page. Never invent chapter counts or exact progress.
+- Show progress bars only on individual book review pages, not on the Currently Reading list. Use small classic Windows 95/98 progress bars: a square, two-pixel sunken frame, silver-grey track, and consistently spaced navy blocks. Show only the bars, without visible status labels, percentages, or “Reading stage” text; retain qualitative reading statuses as accessible labels. Until chapter counts are supplied, fill levels represent stages, not exact completion percentages. Keep the review-page statuses consistent with the user-confirmed reading status. Never invent chapter counts or exact progress.
 - Use only book titles, authors, and review opinions supplied or approved by the user. An empty list is preferable to invented reading history or reviews.
 - Review pages share the main site's frame, typography, colors, and navigation, and link back to `/#reading`. Keep simple author labels and one book cover on each review page, using locally stored images from official book/author sources or an ISBN-matched library cover with a Book details link. Avoid cards or cover galleries in the book list. Show `Review coming soon.` until the user supplies a review; do not invent opinions or show a misleading word count.
 - Employer links: ShowSeeker → https://www.showseeker.com/; Quantumlabs → https://quantumlabs.us/ (confirmed by the user); Paytm Insider → https://insider.in/.
@@ -63,12 +63,3 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 - Rust for Rustaceans — Jon Gjengset: https://rust-for-rustaceans.com/RustforRustaceans_cover.png
 - Rust Atomics and Locks — Mara Bos: https://mara.nl/atomics/cover.jpg
 - Designing Data-Intensive Applications — Martin Kleppmann (original edition): https://covers.openlibrary.org/b/isbn/9781449373320-L.jpg?default=false
-
-## Reading design experiment
-
-- `currently-reading-2.html` is a separate, user-requested design test, labelled Currently Reading 2. Keep the original `#reading` section and review pages intact until the user chooses whether to replace them.
-- Experimental Explorer-style layout rules live only in `assets/reading-2.css` and are scoped to `.reading-test`. The experiment may extend the aesthetic with a folder sidebar, small cover thumbnails, and a details list; it does not change the main design checkpoint.
-- Keep book order, authors, review links, and progress statuses consistent between the two lists. There are no exact chapter counts yet.
-- Homepage section-navigation JavaScript handles only fragment links. Links to the standalone test page must use normal browser navigation.
-
-- Reading 2 specifically targets Windows 95–97: teal desktop, solid navy title bar, flat silver controls, a white inset folder tree, compact file rows, small thumbnails, and MS Sans Serif/Tahoma text. Its subtitle is `My current reading list`. Avoid pastel sidebar gradients, alternating row colors, and large editorial headings in this experiment.
