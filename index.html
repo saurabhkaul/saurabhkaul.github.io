@@ -11,7 +11,7 @@
   <body>
     <div class="window">
       <header class="titlebar"><span class="page-icon" aria-hidden="true"></span>saurabhkaul.html</header>
-      <nav class="toolbar" aria-label="Page navigation"><a href="#about">About</a><a href="#now">Personal Projects</a><a href="#reading">Currently Reading</a><a href="#links">Links</a></nav>
+      <nav class="toolbar" aria-label="Page navigation"><a href="#about">About</a><a href="#now">Personal Projects</a><a href="#reading">Currently Reading</a><a href="currently-reading-2.html">Currently Reading 2</a><a href="#links">Links</a></nav>
       <div class="address">https://saurabhkaul.github.io/</div>
       <main>
         <section id="about" aria-labelledby="about-heading">
@@ -49,7 +49,7 @@
     </div>
     <script>
       const windowFrame = document.querySelector('.window');
-      const navigation = [...document.querySelectorAll('.toolbar a')];
+      const navigation = [...document.querySelectorAll('.toolbar a[href^="#"]')];
       const panels = [...document.querySelectorAll('main > section')];
       function showPanel(hash, focusHeading = false) {
         const panel = panels.find(section => '#' + section.id === hash) || panels[0];

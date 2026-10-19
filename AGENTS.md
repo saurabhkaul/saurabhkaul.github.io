@@ -63,3 +63,10 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 - Rust for Rustaceans — Jon Gjengset: https://rust-for-rustaceans.com/RustforRustaceans_cover.png
 - Rust Atomics and Locks — Mara Bos: https://mara.nl/atomics/cover.jpg
 - Designing Data-Intensive Applications — Martin Kleppmann (original edition): https://covers.openlibrary.org/b/isbn/9781449373320-L.jpg?default=false
+
+## Reading design experiment
+
+- `currently-reading-2.html` is a separate, user-requested design test, labelled Currently Reading 2. Keep the original `#reading` section and review pages intact until the user chooses whether to replace them.
+- Experimental Explorer-style layout rules live only in `assets/reading-2.css` and are scoped to `.reading-test`. The experiment may extend the aesthetic with a folder sidebar, small cover thumbnails, and a details list; it does not change the main design checkpoint.
+- Keep book order, authors, review links, and progress statuses consistent between the two lists. There are no exact chapter counts yet.
+- Homepage section-navigation JavaScript handles only fragment links. Links to the standalone test page must use normal browser navigation.
