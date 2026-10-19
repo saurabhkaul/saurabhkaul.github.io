@@ -73,10 +73,22 @@ h2 { margin: 0 0 9px; font: bold 12px/1.5 "Courier New", monospace; text-transfo
 .review-pending { color: #666; font: 12px/1.7 "Courier New", monospace; }
 @media (max-width: 420px) { .book-overview { grid-template-columns: 1fr; gap: 20px; } }
 
+/* Classic Windows-style sunken track and uniformly spaced blue blocks. */
 .reading-progress { max-width: 260px; margin: 10px 0 4px; }
-.progress-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3px 12px; margin-bottom: 4px; font: 10px/1.6 "Courier New", monospace; }
-.progress-kind { color: #666; }
-.progress-track { display: flex; gap: 3px; height: 17px; padding: 2px; background: #dfdfdf; border: 2px solid; border-color: #808080 #fff #fff #808080; }
-.progress-track > span { flex: 1; min-width: 0; }
-.progress-track > .is-filled { background: repeating-linear-gradient(90deg, #000080 0 7px, transparent 7px 9px); }
+.reading-progress[data-stage="started"] { --fill-width: calc(100% / 3); }
+.reading-progress[data-stage="mostly-finished"] { --fill-width: calc(200% / 3); }
+.reading-progress[data-stage="finished"] { --fill-width: 100%; }
+.progress-track {
+  height: 22px;
+  padding: 3px;
+  background: #c0c0c0;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #808080,
+              inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+}
+.progress-fill {
+  display: block;
+  width: var(--fill-width);
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #000080 0 9px, transparent 9px 11px);
+}
 .review-body .reading-progress { margin-top: 0; margin-bottom: 24px; }
