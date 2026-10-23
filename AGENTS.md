@@ -28,6 +28,7 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 ## Content
 
 - Write short, direct, factual copy. Avoid sentimental language, welcome messages, and generic personal-brand slogans.
+- Do not add unrequested introductory sentences, filler, or explanations of how a list is ordered. Currently Reading goes directly from its heading to the book list; do not restore the removed “From currently reading to finished. Reviews to follow.” line or a paraphrase.
 - Preserve approved biography and project descriptions unless the task asks to change them. Ask the user when personal facts or employer links are uncertain.
 - Keep both explained, linked projects under one Personal Projects heading. Gossip Glomers carries `(WIP)`.
 - The reading section is titled `Currently Reading` and lists books the user is reading or has finished. Each book links to its own static review page, with a review of 200 words or fewer.

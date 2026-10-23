@@ -55,7 +55,6 @@ h2 { margin: 0 0 9px; font: bold 12px/1.5 "Courier New", monospace; text-transfo
 .window[data-panel] .links { margin-top: 14px; }
 @media (max-width: 420px) { body { padding: 20px 12px; } .toolbar { gap: 6px 10px; } }
 
-.reading-intro { color: #555; }
 .empty-state { padding: 16px 0; border-top: 1px dotted #b7b7b7; color: #666; font: 12px/1.7 "Courier New", monospace; }
 .book-list { margin: 20px 0 0; padding-left: 25px; }
 .book-list li { padding: 12px 0 12px 4px; border-top: 1px dotted #b7b7b7; }
