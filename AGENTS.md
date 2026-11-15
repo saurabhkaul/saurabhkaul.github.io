@@ -64,3 +64,20 @@ Use the minimal Y2K / Win95 browser-window design in `index.html`. Commit `c7f55
 - Rust for Rustaceans — Jon Gjengset: https://rust-for-rustaceans.com/RustforRustaceans_cover.png
 - Rust Atomics and Locks — Mara Bos: https://mara.nl/atomics/cover.jpg
 - Designing Data-Intensive Applications — Martin Kleppmann (original edition): https://covers.openlibrary.org/b/isbn/9781449373320-L.jpg?default=false
+
+## Rust graphics demo
+
+- `graphics/` is a separate static page; load its WASM only there. Keep it unlinked from the site: the user removed it from navigation and Personal Projects.
+- Rust renderer source lives in `rust/graphics/`; WGSL renders a rotatable Venus de Milo bust over a vaporwave sunset and neon grid. Model provenance and regeneration instructions live in `assets/models/ATTRIBUTION.md`.
+- Build with `./scripts/build-graphics.sh` after installing Rust, the `wasm32-unknown-unknown` target, and `wasm-pack` 0.13.1. Commit `Cargo.lock` and the generated `graphics/pkg/site_graphics.js` and `.wasm` so root-based GitHub Pages needs no Rust runtime or build step.
+- Serve the repository root over localhost (for example `python3 -m http.server 8000 --bind 127.0.0.1`) and open `/graphics/`. WebGPU requires localhost or HTTPS.
+- Preserve WebGL2 fallback, keyboard rotation, Pause/Play, Reset, reduced-motion handling, resolution limits, and hidden-tab suspension.
+- After renderer changes, rebuild and verify both browser backends, mobile sizing, controls, and the unavailable-renderer message.
+
+## Dangerous Dave
+
+- `games/dangerous-dave/` runs the original DOS game in the pinned js-dos `emulators` 8.5.3 runtime, loaded only after Start game. All runtime and game assets are hosted locally; no cloud account or backend is needed.
+- Preserve the entire, unmodified `gameedge.zip` Gamer's Edge Sampler, its original notices, and the provenance in `games/dangerous-dave/ATTRIBUTION.md`. Supply DOSBox configuration separately in `dosbox.conf`.
+- Keep the GPL license and accompanying emulator source archive in `vendor/`; see `vendor/SOURCES.md` for exact wrapper and DOSBox revisions.
+- Keep the Dangerous Dave header link on the homepage, graphics page, review pages, and review template, with an active indicator on the game page. Preserve native navigation and existing section URLs.
+- Verify real gameplay, keyboard and touch controls, pause/resume, mute, restart, focus loss, fullscreen, download failures, and desktop/mobile layouts after emulator changes. Tab must leave the canvas; held keys must be released on blur. No game progress is persisted.

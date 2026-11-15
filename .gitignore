@@ -1,1 +1,4 @@
 .DS_Store
+
+# Rust build intermediates (generated browser assets are tracked).
+rust/graphics/target/

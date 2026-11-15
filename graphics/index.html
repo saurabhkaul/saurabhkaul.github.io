@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e3e6eb">
+    <meta name="description" content="A rotatable Venus de Milo bust against a vaporwave sunset, rendered with Rust and wgpu.">
+    <title>Vaporwave Venus — Saurabh Kaul</title>
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <div class="window">
+      <header class="titlebar"><span class="page-icon" aria-hidden="true"></span>venus.html</header>
+      <nav class="toolbar" aria-label="Page navigation"><a href="/#about">About</a><a href="/#now">Personal Projects</a><a href="/#reading">Currently Reading</a><a href="/#links">Links</a><a href="/games/dangerous-dave/">Dangerous Dave</a></nav>
+      <div class="address">https://saurabhkaul.github.io/graphics/</div>
+      <main>
+        <h1>Vaporwave Venus</h1>
+        <p>Venus de Milo in pink and cyan.</p>
+        <canvas id="screensaver" class="graphics-canvas" width="560" height="400" tabindex="0" aria-label="Rotatable Venus de Milo bust against a vaporwave sunset and neon grid" aria-describedby="screensaver-help"><p>A marble Venus de Milo bust against a vaporwave sunset. Your browser does not support canvas.</p></canvas>
+        <p id="screensaver-help" class="graphics-help">Drag to rotate, or focus the canvas and use the arrow keys.</p>
+        <div class="graphics-controls" aria-label="Animation controls">
+          <button id="toggle" type="button" disabled>Play</button>
+          <button id="reset" type="button" disabled>Reset</button>
+        </div>
+        <p id="graphics-status" class="graphics-status" role="status">Animation requires JavaScript.</p>
+        <p class="graphics-help">Statue scan: <a href="https://sketchfab.com/3d-models/venus-de-milo-aphrodite-of-milos-53082b5d6cef4c34a9701a2a24f58075">SMK – National Gallery of Denmark</a> · CC0</p>
+        <p class="review-back"><a href="/#now">← Personal Projects</a></p>
+      </main>
+      <footer class="statusbar"><a href="https://github.com/saurabhkaul/saurabhkaul.github.io">View source</a></footer>
+    </div>
+    <script type="module" src="loader.js"></script>
+  </body>
+</html>

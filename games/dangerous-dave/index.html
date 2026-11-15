@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e3e6eb">
+    <meta name="description" content="Play the original Dangerous Dave DOS game in your browser.">
+    <title>Dangerous Dave — Saurabh Kaul</title>
+    <link rel="stylesheet" href="../../assets/site.css">
+  </head>
+  <body>
+    <div class="window">
+      <header class="titlebar"><span class="page-icon" aria-hidden="true"></span>dave.exe</header>
+      <nav class="toolbar" aria-label="Page navigation"><a href="/#about">About</a><a href="/#now">Personal Projects</a><a href="/#reading">Currently Reading</a><a href="/#links">Links</a><a href="/games/dangerous-dave/" aria-current="page">Dangerous Dave</a></nav>
+      <div class="address">https://saurabhkaul.github.io/games/dangerous-dave/</div>
+      <main>
+        <h1>Start of a lifelong romance: Dangerous Dave</h1>
+        <p>The original DOS game by John Romero.</p>
+        <p>
+          My first introduction to computers. I used to play this game in our junior schools computer lab.
+          Remove our shoes outside, huddle together on a win xp system. I always found this game so fascinating, especially the sewer aesthetic, and the game sounds.
+          So it makes sense to have a shrine to this game on my personal website, so that its always within reach.
+        </p>
+        <div id="game-player" class="game-player">
+          <canvas id="game-screen" width="320" height="200" tabindex="0" aria-label="Dangerous Dave game screen" aria-describedby="game-help"><p>Your browser needs canvas support to display the game.</p></canvas>
+          <div class="game-touch" aria-label="Touch controls">
+            <button type="button" data-key="263" aria-label="Move left">←</button>
+            <button type="button" data-key="262" aria-label="Move right">→</button>
+            <button type="button" data-key="265" aria-label="Jump">Jump</button>
+            <button type="button" data-key="341">Fire</button>
+            <button type="button" data-key="342">Jetpack</button>
+            <button type="button" data-key="257">Enter</button>
+            <button type="button" data-key="32">Space</button>
+          </div>
+        </div>
+        <div class="graphics-controls game-controls" aria-label="Game controls">
+          <button id="game-start" type="button" disabled>Start game</button>
+          <button id="game-pause" type="button" disabled>Pause</button>
+          <button id="game-mute" type="button" aria-pressed="false" disabled>Mute</button>
+          <button id="game-fullscreen" type="button" disabled>Fullscreen</button>
+        </div>
+        <p id="game-status" class="graphics-status" role="status">Enable JavaScript to play.</p>
+        <p id="game-help" class="graphics-help">Click the game screen to use the keyboard. Arrow keys move and jump; Ctrl fires; Alt uses the jetpack. Enter or Space advances the title screens. Tab leaves the game controls.</p>
+        <p class="graphics-help">Game: John Romero / Softdisk. <a href="https://www.dosgamesarchive.com/download/dangerous-dave/">Original sampler</a> · <a href="gameedge.zip">Download sampler</a><br>Emulation: <a href="https://js-dos.com/">js-dos / DOSBox</a> · <a href="vendor/LICENSE">License</a> · <a href="vendor/emulators-8.5.3-source.tar.gz">Emulator source</a></p>
+      </main>
+      <footer class="statusbar"><a href="https://github.com/saurabhkaul/saurabhkaul.github.io">View source</a></footer>
+    </div>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>

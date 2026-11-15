@@ -91,3 +91,54 @@ h2 { margin: 0 0 9px; font: bold 12px/1.5 "Courier New", monospace; text-transfo
   background: repeating-linear-gradient(90deg, #000080 0 9px, transparent 9px 11px);
 }
 .review-body .reading-progress { margin-top: 0; margin-bottom: 24px; }
+
+.graphics-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 7 / 5;
+  background: #030511;
+  border: 2px solid;
+  border-color: #808080 #dfdfdf #dfdfdf #808080;
+  cursor: grab;
+  touch-action: none;
+}
+.graphics-canvas:active { cursor: grabbing; }
+.graphics-canvas:focus-visible, .graphics-controls button:focus-visible {
+  outline: 2px dotted #000080;
+  outline-offset: 4px;
+}
+.graphics-help, .graphics-status { margin: 12px 0; color: #555; font-size: 12px; }
+.graphics-controls { display: flex; flex-wrap: wrap; gap: 10px; }
+.graphics-controls button {
+  min-width: 72px;
+  min-height: 36px;
+  padding: 4px 12px;
+  border: 2px solid;
+  border-color: #fff #777 #777 #fff;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #222;
+  font: 12px Tahoma, Verdana, sans-serif;
+  cursor: pointer;
+}
+.graphics-controls button:active { border-color: #777 #fff #fff #777; }
+.graphics-controls button:disabled { color: #666; cursor: default; }
+
+.game-player { background: #000; border: 2px solid; border-color: #808080 #dfdfdf #dfdfdf #808080; }
+#game-screen { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; image-rendering: pixelated; background: #000; }
+#game-screen:focus-visible { outline: 2px dotted #fff; outline-offset: -4px; }
+.game-controls { margin-top: 16px; }
+.game-touch { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; background: #c0c0c0; }
+.game-touch button {
+  min-width: 44px; min-height: 44px; padding: 4px 9px;
+  border: 2px solid; border-color: #fff #777 #777 #fff; border-radius: 0;
+  background: #c0c0c0; color: #222; font: 12px Tahoma, Verdana, sans-serif;
+  touch-action: none; user-select: none; -webkit-user-select: none;
+}
+.game-touch button:active, .game-touch button[data-held] { border-color: #777 #fff #fff #777; background: #aaa; }
+.game-touch button:focus-visible { outline: 2px dotted #000080; outline-offset: 2px; }
+.game-player:fullscreen { display: flex; flex-direction: column; justify-content: center; border: 0; }
+.game-player:fullscreen #game-screen { width: 100%; max-height: calc(100dvh - 130px); object-fit: contain; flex: 1; min-height: 0; }
+.game-player:fullscreen .game-touch { flex-shrink: 0; justify-content: center; }
+.toolbar a[aria-current="page"] { background: #000080; color: #fff; }
